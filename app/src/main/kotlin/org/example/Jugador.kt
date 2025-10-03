@@ -1,10 +1,10 @@
 package org.example
 
-import Posicion  
-import Habilidades  
-  
-data class Jugador(  
-    val nombre: String,  
-    val posicion: Posicion,  
-    val habilidades: Habilidades  
+import org.example.Posicion
+import org.example.Habilidades
+
+data class Jugador(
+    val nombre: String,
+    val posicion: Posicion,
+    val habilidades: Habilidades
 )
