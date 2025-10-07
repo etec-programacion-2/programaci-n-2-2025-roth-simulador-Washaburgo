@@ -1,10 +1,7 @@
 package org.example
 
-import org.example.Posicion
-import org.example.Habilidades
-import org.example.Jugador
-
 fun main() {
+    // Crear jugadores
     val messi = Jugador(
         nombre = "Lionel Messi",
         posicion = Posicion.DELANTERO,
@@ -17,15 +14,18 @@ fun main() {
         habilidades = Habilidades(ataque = 10, defensa = 90, velocidad = 60)
     )
 
-    println("Equipo de Fútbol Simulador")
-    println("------------------------------")
-    println("Jugador 1: ${messi.nombre} (${messi.posicion})")
-    println("  Ataque: ${messi.habilidades.ataque}")
-    println("  Defensa: ${messi.habilidades.defensa}")
-    println("  Velocidad: ${messi.habilidades.velocidad}")
+    // Crear equipo
+    val godoycruz = Equipo("Godoy Cruz", "Argentina")
 
-    println("\nJugador 2: ${neuer.nombre} (${neuer.posicion})")
-    println("  Ataque: ${neuer.habilidades.ataque}")
-    println("  Defensa: ${neuer.habilidades.defensa}")
-    println("  Velocidad: ${neuer.habilidades.velocidad}")
+    // Añadir jugadores al equipo
+    godoycruz.aniadirJugador(messi)
+    godoycruz.aniadirJugador(neuer)
+
+    // Mostrar información del equipo
+    println("Equipo: ${godoycruz.nombre} (${godoycruz.pais})")
+    println("Número de jugadores: ${godoycruz.obtenerNumeroJugadores()}")
+    println("\nPlantilla:")
+    godoycruz.obtenerPlantilla().forEach { jugador ->
+        println("- ${jugador.nombre} (${jugador.posicion})")
+    }
 }
