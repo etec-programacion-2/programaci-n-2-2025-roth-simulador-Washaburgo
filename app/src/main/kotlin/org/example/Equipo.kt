@@ -3,9 +3,7 @@ package org.example
 import kotlin.text.compareTo
 
 class Equipo(val nombre: String, val pais: String) {
-
     private val jugadores = mutableListOf<Jugador>()
-
     companion object {
 
         const val LIMITE_JUGADORES = 11
