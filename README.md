@@ -9,7 +9,7 @@ git clone https://github.com/etec-programacion-2/programaci-n-2-2025-roth-simula
 cd programaci-n-2-2025-roth-simulador-Washaburgo
 
 # Compilar el proyecto
-kotlinc src/main/kotlin/org/example/App.kt -include-runtime -d Bundesliga.jar
+./gradlew build -x test
 
 # Ejecutar el simulador
-java -jar Bundesliga.jar
+./gradlew run
